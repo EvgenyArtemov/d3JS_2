@@ -1,0 +1,11 @@
+.centeredText {
+  width: 100%;
+  text-align: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}

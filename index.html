@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Defs</title>
+</head>
+<body>
+  <h1 class="centeredText">Linear gradients inside SVG</h1>
+  <div class="flexColumn">
+    <h2 class="centeredText">Radial gradient</h2>
+    <svg width="400" height="200">
+      <defs>
+        <!-- Defining gradient-->
+        <radialGradient id="radialGradient">
+          <stop offset="10%" stop-color="aquamarine" />
+          <stop offset="80" stop-color="darkCyan" />
+        </radialGradient>
+      </defs>
+      <!-- Using of predefined gradients-->
+      <circle cx="200" cy="100" r="100" fill="url(#radialGradient)" />
+    </svg>
+  </div>
+  <div class="flexColumn">
+    <h2 class="centeredText">Linear gradient</h2>
+    <svg width="400" height="200">
+      <defs>
+        <linearGradient id="linearGradient" gradientTransform="rotate(90)">
+          <stop offset="20%" stop-color="aquamarine" />
+          <stop offset="80%" stop-color="darkCyan" />
+        </linearGradient>
+      </defs>
+      <circle cx="200" cy="100" r="100" fill="url(#linearGradient)" />
+    </svg>
+  </div>
+</body>
+</html>
