@@ -28,11 +28,49 @@
     <svg width="400" height="200">
       <defs>
         <linearGradient id="linearGradient" gradientTransform="rotate(90)">
-          <stop offset="20%" stop-color="aquamarine" />
+          <stop offset="20%" stop-color="aquamarine">
+            <animate
+              attributeName="stop-color"
+              values="aquamarine; aqua; aquamarine"
+              dur="5s"
+              repeatCount="indefinite"
+            ></animate>
+          </stop>
           <stop offset="80%" stop-color="darkCyan" />
         </linearGradient>
       </defs>
       <circle cx="200" cy="100" r="100" fill="url(#linearGradient)" />
+    </svg>
+  </div>
+  <div class="flexColumn">
+    <h2 class="centeredText">Animated Radial gradient</h2>
+    <svg width="400" height="200">
+      <defs>
+        <radialGradient
+          id="radialGradient"
+          cx="0.5"
+          cy="0.9"
+        >
+          <animate
+            attributeName="cy"
+            values="0.1; 0.8; 0.1"
+            dur="15s"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="cx"
+            values="0.5; 0.8; 0.5;"
+            dur="7.5s"
+            keySplines="0.13; 0.61; 0.98; 0.54"
+            repeatCount="indefinite"
+          ></animate>
+          <stop offset="0%" stop-color="aquamarine">
+            
+          </stop>
+          <stop offset="90" stop-color="darkCyan" />
+        </radialGradient>
+      </defs>
+      <circle cx="200" cy="100" r="100" fill="url(#radialGradient)" />
     </svg>
   </div>
 </body>
